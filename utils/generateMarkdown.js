@@ -1,20 +1,70 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
+// function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  const {
+    title,
+    license,
+    description,
+    installation,
+    usage,
+    contribution,
+    test,
+    github,
+    email,
+  } = data;
+
+  return `# ${title}
+  
+  ![License](https://img.shields.io/badge/License-${license}-blue)
+
+ ## Description  
+ ${description}
+ 
+ ## Built With
+
+ ${technologies}
+ 
+  |  Table of Contents |
+  | ----------- |
+  | [I Installation.](#installation) |
+  | [II Usage.](#usage)|
+  | [III License.](#licenses)|
+  | [IV Contributing.](#contributing)|
+  | [V Tests.](#tests)|
+  | [VI Questions.](#questions)|
+
+
+  ## Installation
+  
+  ${installation}
+
+  
+  ## Usage
+
+  ${usage}
+
+  
+  ## Contributions
+
+  ${contribution}
+
+
+  ## Tests
+  
+  ${test}
+
+  
+  ## License
+  
+  This project is using the ${license} license.
+
+
+  ## Questions
+  If you have any questions about this repo please feel free to reach out to me through [GitHub](${github}) or [Email](mailto:${email})
 
 `;
 }
 
-module.exports = generateMarkdown;
+// export the function to be used in index.js
+module.exports = {
+  generateMarkdown,
+};
