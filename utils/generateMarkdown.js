@@ -4,6 +4,7 @@ function generateMarkdown(data) {
     title,
     license,
     description,
+    technologies,
     installation,
     usage,
     contribution,
@@ -16,12 +17,13 @@ function generateMarkdown(data) {
   
   ![License](https://img.shields.io/badge/License-${license}-blue)
 
- ## Description  
- ${description}
+ ## Description
+
+    ${description}
  
  ## Built With
 
- ${technologies}
+   ${technologies}
  
   |  Table of Contents |
   | ----------- |
@@ -35,31 +37,30 @@ function generateMarkdown(data) {
 
   ## Installation
   
-  ${installation}
+    ${installation}
 
-  
   ## Usage
 
-  ${usage}
+     ${usage}
 
   
   ## Contributions
 
-  ${contribution}
+    ${contribution}
 
 
   ## Tests
   
-  ${test}
+     ${test}
 
   
   ## License
   
-  This project is using the ${license} license.
+      This project is using the ${license} license.
 
 
   ## Questions
-  If you have any questions about this repo please feel free to reach out to me through [GitHub](${github}) or [Email](mailto:${email})
+ If you have any questions about this repo please feel free to reach out to me through [GitHub](${github}) or [Email](mailto:${email})
 
 `;
 }
